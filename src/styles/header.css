@@ -1,0 +1,217 @@
+:root{
+    --primary:#EBD4DA;
+}
+
+.header-contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: start;
+    align-items: start; /*center*/
+    width: 80vw;
+    height: 55vh;
+    margin: 100px auto 100px auto;
+    background-image: url('../img/sunshineLogo.png');
+    background-repeat: no-repeat;
+    background-position: 85% center;
+    background-size:450px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    box-shadow: 6px 6px 15px -1px #b4a1a6,-6px -6px 15px -1px #f5ebee;
+}
+
+/*////////////////////NAVEGACION///////////////////*/
+
+.navegacion-contenedor{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 0 auto;
+    align-items: center;
+    width: 80%;
+    height: 10vh;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 330px;
+    height: 10vh;
+
+}
+
+.enlace{
+    text-decoration: none;
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px black, 1px 1px 1px gray; /*NUEVO!!!!!!*/
+
+}
+
+.enlace:hover{
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.inicio{
+    margin:15px 0 0 0 ;
+    width: 65px;
+    height: 50px;
+    border-radius: 10px;
+    background-image: url('../img/bow-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+    border-style: none;
+    cursor: pointer;
+    background-color: var(--primary);
+    box-shadow: 5px 5px 14px -1px #b4a1a6,
+    -5px -5px 14px -1px #f5ebee;
+}
+
+/*//////////////////INFORMACION////////////////*/
+
+.info-contenedor{
+    margin: 5vh 0 0 5vw;
+    width: 320px;
+    height: 100%;
+}
+
+.info-titulo{
+    font-family: 'Amatic SC', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0 0 3vh 0;
+    text-shadow: 0.5px 0.5px 0.5px black, 1px 1px 1px gray;
+    color: black;
+
+}
+
+.info{
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    font-weight:normal;
+    width: 310px;
+    height: auto;
+    text-align: justify;
+    margin: 0 0 40px 0;
+    color: black;
+}
+
+.localizacion-txt{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    font-weight:bolder;
+    margin: 10px 0 0 0;
+    text-shadow: 0.5px 0.5px 0.5px black, 0.5px 0.5px 0.5px gray;
+    color: black;
+}
+
+.localizacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    box-shadow: 6px 6px 15px -1px #b4a1a6,-6px -6px 15px -1px #f5ebee;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+
+
+/*///////////////MEDIA QUERIES//////////////////*/
+
+
+@media(max-width:1100px){
+    .header{
+        background-position: right;
+        background-size: 42vw;
+    }
+}
+
+@media(max-width:900px){
+
+    /*///NAVEGACION///*/
+    .navegacion{
+        margin: 0 auto 0 auto;
+    }
+
+    /*///HEADER///*/
+    .header{
+        background-position: right;
+        background-size: 42vw;
+    }
+
+    /*//////////////////INFORMACION////////////////*/
+
+    .info-contenedor{
+        width: 250px;
+        height: 100%;
+        margin: 4vh 0 0 3vw;
+    }
+
+    .info{
+        font-size: 3vmin;
+        width: 100%;
+        height: auto;
+        text-align: justify;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media(max-width:640px){
+    .header{
+        background-size: 260px;
+        background-position: top;
+        justify-content: center;
+        align-items: flex-end;
+        width: 80vw;
+        height: 80vh;  
+    }
+
+    .info-contenedor{
+        align-self: flex-end;
+        width: 95%; /*370px*/
+        height: 330px;
+        margin: 0 0 0 0;
+    }
+
+    .info-titulo{
+        text-align: center;
+    }
+
+    .info{
+        font-size: 4vmin;
+    }
+}
+
+@media(max-width:450px){
+
+    .header{
+        width: 95%;
+        height: 600px;
+        box-shadow: 3px 3px 10px -1px #b4a1a6,-3px -3px 10px -1px #f5ebee;
+
+    }
+
+    .navegacion-contenedor{
+        width: 98%;
+    }
+}
+

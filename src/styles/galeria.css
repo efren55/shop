@@ -1,0 +1,123 @@
+:root{
+    --secondary:#fffefe;
+    --back:#f8eeef;
+}
+
+
+.galeria-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 9vh auto 0 auto;
+    width: 80%;
+    height: 870px;
+    border-radius: 20px;
+    background-color: var(--secondary);
+}
+
+
+.imagenes-galeria{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 160px;
+    background-color: var(--back);
+    border-radius: 15px;
+}
+
+.img1{
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 14px -1px #b4a1a6,-5px -5px 14px -1px #f5ebee;
+}
+
+.img1:hover{
+    transform: scale(1.1);
+}
+
+
+
+/*///////////IMAGEN GRANDE//////////////////*/
+
+.visualizacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 50px 0; /*CAMBIO 25px*/
+}
+
+.imgGrande{
+    width: 350px;
+    height: 500px;
+    margin: auto auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 14px -1px #b4a1a6,-5px -5px 14px -1px #f5ebee;
+
+}
+
+.galeria-titulo{
+    color: black;
+    margin: 0 0 10px 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 55px;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px rgb(255, 255, 255), 1px 1px 1px rgb(182, 182, 182);
+}
+
+
+/*//////////MEDIA QUERIES///////////////*/
+
+@media(max-width:1100px){
+
+    .galeria-contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 9vh auto 0 auto;
+        width: 80%;
+        height: auto; /*870px*/
+    }
+
+    .imagenes-galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        justify-items:center;
+        align-items:center;
+        width: 80%;
+        height: 300px;
+        margin: 0 0 20px 0;
+    }
+
+}
+
+@media(max-width:620px){
+    .galeria-contenedor{
+        width: 90%;
+    }
+
+    .imagenes-galeria{
+        width: 95%;
+    }
+}
+
+@media(max-width:440px){
+    .imgGrande{
+        width: 300px;
+        height: 450px;
+    }
+    
+    .img1{
+        width: 80px;
+        height: 110px;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 5px 5px 14px -1px #b4a1a6,-5px -5px 14px -1px #f5ebee;
+    }
+}
